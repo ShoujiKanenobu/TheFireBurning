@@ -13,6 +13,7 @@ public class ProjectileController : MonoBehaviour
     private float aliveTime = 0;
     private Vector3 direction;
     public int pierce = 1;
+    public PointSystem ps;
     ProjectileController(Vector3 dest)
     {
         destination = dest;
@@ -21,7 +22,7 @@ public class ProjectileController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
+        ps = GameObject.Find("Score").GetComponent<PointSystem>();
     }
 
     // Update is called once per frame
@@ -45,6 +46,7 @@ public class ProjectileController : MonoBehaviour
         {
             Debug.Log("Entered");
             collision.GetComponent<EnemyController>().takeDamage(10);
+            ps.addScore();
             pierce--;
             if (pierce <= 0)
                 Destroy(this.gameObject);

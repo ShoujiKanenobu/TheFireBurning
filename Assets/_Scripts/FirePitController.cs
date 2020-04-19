@@ -16,9 +16,11 @@ public class FirePitController : MonoBehaviour
     public float maxVolume;
     public GameObject deathText;
     public EscapeMenu em;
+    public PointSystem ps;
 
     private void Start()
     {
+        ps = GameObject.Find("Score").GetComponent<PointSystem>();
         em = GameObject.Find("MenuHandler").GetComponent<EscapeMenu>();
     }
     // Update is called once per frame
@@ -50,16 +52,21 @@ public class FirePitController : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<Item>() && collision.gameObject.GetComponent<Item>().type == Item.ItemType.LOG)
         {
+            ps.addScore();
             fireHP += 10;
             Destroy(collision.gameObject);
         }
         else if (collision.gameObject.GetComponent<Item>() && collision.gameObject.GetComponent<Item>().type == Item.ItemType.COAL)
         {
+            //The literal worst way to add points but crunch baby.
+            ps.addScore();
+            ps.addScore();
             fireHP += 20;
             Destroy(collision.gameObject);
         }
         else if (collision.gameObject.GetComponent<ProjectileController>())
         {
+            ps.addScore();
             fireHP += 10;
             Destroy(collision.gameObject);
         }

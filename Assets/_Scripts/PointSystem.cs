@@ -26,11 +26,10 @@ public class PointSystem : MonoBehaviour
         tmpText.text = "Score: " + (int)score;
         timer.text = "Time: " + time.ToString("F2");
         time += Time.deltaTime;
-        if (firepit.burnoutModifier > 1)
-            score += Time.deltaTime / 0.3f * (firepit.burnoutModifier / 0.2f) * (1 / firepit.fireHP);
-        else
-        {
-            score += 10 * Time.deltaTime * (1 / firepit.fireHP);
-        }
+       
+    }
+    public void addScore()
+    {
+        score++;
     }
 }
