@@ -10,7 +10,7 @@ public class HighScoreManager : MonoBehaviour
     public PointSystem ps;
     public void Update()
     {
-        if(fp.fireHP <= 0 && ps.score >= PlayerPrefs.GetInt("HighScoreScore"))
+        if(fp.fireHP <= 0 && ps.score >= PlayerPrefs.GetFloat("HighScoreScore"))
         {
             newHighScore(ps.score, ps.time);
             newHighScoreText.SetActive(true);
@@ -19,7 +19,7 @@ public class HighScoreManager : MonoBehaviour
         {
             newHighScoreText.SetActive(false);
         }
-        if (fp.fireHP <= 0 && ps.time >= PlayerPrefs.GetInt("HighTimeTime"))
+        if (fp.fireHP <= 0 && ps.time >= PlayerPrefs.GetFloat("HighTimeTime"))
         {
             newHighTime(ps.score, ps.time);
             newHighScoreText.SetActive(true);
