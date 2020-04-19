@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -8686,9 +8686,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f07f97c62c9f4a54eb070d6070f71328, type: 3}
+  m_audioClip: {fileID: 8300000, guid: af9258a1f2e5f1e4ca0af0f4c1f7c2ba, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.046
+  m_Volume: 0.145
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -17205,6 +17205,7 @@ MonoBehaviour:
   audio: {fileID: 491265935}
   maxVolume: 0.2
   deathText: {fileID: 1538133838}
+  em: {fileID: 0}
 --- !u!61 &491265933
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17262,9 +17263,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d6907c92cdca3eb40b0e0e4ab4ba6d70, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f6bf7cc278651ae4d881d6a4c6900350, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.203
+  m_Volume: 0.249
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -93323,6 +93324,7 @@ MonoBehaviour:
   tmpText: {fileID: 0}
   timer: {fileID: 1735073928}
   firepit: {fileID: 491265932}
+  em: {fileID: 0}
   score: 0
   time: 0
 --- !u!114 &593902478
@@ -105591,6 +105593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuObj: {fileID: 503251800}
   fp: {fileID: 491265932}
+  paused: 0
 --- !u!1 &925825679
 GameObject:
   m_ObjectHideFlags: 0
@@ -139429,6 +139432,7 @@ MonoBehaviour:
   projectile: {fileID: 5093291642575030497, guid: 276c5f4c0b80fe64392ad9dc8fbfccef,
     type: 3}
   pierceBonus: 0
+  em: {fileID: 0}
   items:
   - {fileID: 9180059403663268917, guid: 5f7e926319c4a1a4fb213fa17064094e, type: 3}
   - {fileID: 6122879032709770747, guid: 85d7c6d2efc45db4996b922c6a914983, type: 3}

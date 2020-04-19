@@ -34,12 +34,12 @@ public class HighScoreManager : MonoBehaviour
         {
             float[] highscore = DisplayHighScore();
             text.text = "Highest Score" +
-                "\nScore: " + highscore[0] + 
-                "\nTime: " + highscore[1];
+                "\nScore: " + highscore[0].ToString("F2") + 
+                "\nTime: " + highscore[1].ToString("F2");
             float[] highTime = DisplayHighTime();
             text.text += "\n\nBest Time " +
-                "\nScore: " + highTime[0] +
-                "\nTime: " + highTime[1];
+                "\nScore: " + highTime[0].ToString("F2") +
+                "\nTime: " + highTime[1].ToString("F2");
         }
     }
 
