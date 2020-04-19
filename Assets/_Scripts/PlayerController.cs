@@ -125,7 +125,6 @@ public class PlayerController : MonoBehaviour
             audio2.Play();
             movespeed += movespeed * 0.1f;
             Destroy(collision.gameObject);
-            currentItem = null;
         }
         else if (collision.gameObject.GetComponent<Item>() != null && collision.gameObject.GetComponent<Item>().type == Item.ItemType.COAL)
         {
